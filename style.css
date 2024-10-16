@@ -1,0 +1,142 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins',sans-serif;
+    box-sizing: border-box;
+}
+body{
+    background:#39297b;
+    color:white;
+}
+h1{
+    text-align: center;
+    margin: 100px auto 50px;
+    font-weight: 600;
+}
+form{
+    width: 90%;
+    max-width: 600px;
+    margin:auto;
+    height: 80px;
+    background: #434989;
+    display: flex;
+    align-items: center;
+    border-radius: 8px;
+}
+form input{
+    flex:1 ;
+    height: 100%;
+    border: 0;
+    outline: 0;
+    background: transparent;
+    color: white;
+    font-size: 18px;
+    padding: 0 30px;
+}
+form button{
+    padding: 0 40px;
+    height: 100%;
+    background:#ff3929;
+    color:white;
+    font-size:18px;
+    border:0;
+    outline:0;
+    border-top-right-radius:8px ;
+    border-bottom-right-radius:8px;
+    cursor:all-scroll;
+}
+::placeholder{
+    color:white;
+    font-size: 18px;
+}
+#back-to-home-btn{
+    background: #ff3929;
+    color: white;
+    border: 0;
+    outline:0;
+    padding: 10px 20px;
+    border-radius: 4px;
+    margin:10px auto 10px;
+    cursor: pointer;
+    display:none;
+}
+#show-more-btn{
+    background: #ff3929;
+    color: white;
+    border: 0;
+    outline:0;
+    padding: 10px 20px;
+    border-radius: 4px;
+    margin:10px auto 10px;
+    cursor: pointer;
+    display:none;
+}
+#seach-result{
+    width: 100%;
+    margin: 120px auto 50px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap:40px;
+} 
+#search-result img{
+    width: 25%;
+    height: 400px;
+    object-fit:cover;
+    border-radius: 5px;
+}
+@media (max-width: 1200px) {
+    #search-box {
+        width: 70%;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    button {
+        font-size: 0.9em;
+    }
+
+    #search-result img {
+        width: calc(33.33% - 40px); /* Adjust for flexbox */
+    }
+}
+
+/* For mobile devices (width between 576px and 768px) */
+@media (max-width: 768px) {
+    #search-box {
+        width: 80%;
+    }
+
+    h1 {
+        font-size: 1.8em;
+    }
+
+    button {
+        font-size: 0.85em;
+    }
+
+    #search-result img {
+        width: calc(50% - 40px); /* Show two images per row */
+    }
+}
+
+/* For small mobile devices (width below 576px) */
+@media (max-width: 576px) {
+    #search-box {
+        width: 90%;
+        font-size: 1.1em;
+    }
+
+    h1 {
+        font-size: 1.5em;
+    }
+
+    button {
+        font-size: 0.8em;
+    }
+
+    #search-result img {
+        width: 100%; /* Show one image per row */
+    }
+}
